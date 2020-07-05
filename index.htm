@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Ubuntu:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./stylesheets/css/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-bar">
+          <div class="nav-title">
+            <h1>We<span>Code</span></h1>
+          </div>
+          <ul class="nav-links">
+            <li class="nav-link">Home</li>
+            <li class="nav-link">About</li>
+            <li class="nav-link">Log In</li>
+            <li class="nav-link">Sign Up</li>
+          </ul>
+        </div>
+      </nav>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="animated-div"></div>
+      <div class="header-wrapper">
+        <div class="header-content">
+          <h1 class="title">We<span>Code</span></h1>
+          <p class="description">Join today and start coding.</p>
+          <div class="button-grp">
+            <button class="btn btn-login">LogIn</button>
+            <button class="btn btn-signup">SignUp</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script>
+      const getRandomValue = (min, max) => {
+        return Math.floor(Math.random() * (max - min)) + min;
+      };
+
+      const animatedDivs = document.getElementsByClassName("animated-div");
+      for (i = 0; i < animatedDivs.length; i++) {
+        animatedDivs[i].style.top = getRandomValue(0, 95) + "%";
+        animatedDivs[i].style.left = getRandomValue(0, 95) + "%";
+      }
+      setInterval(() => {
+        let heightY = window.innerHeight;
+        let widthX = window.innerWidth;
+        for (i = 0; i < animatedDivs.length; i++) {
+          animatedDivs[i].style.transform =
+            "translate(" +
+            getRandomValue(-widthX / 2, widthX / 2) +
+            "px," +
+            getRandomValue(-heightY / 2, heightY / 2) +
+            "px)";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
