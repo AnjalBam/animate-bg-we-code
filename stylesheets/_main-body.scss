@@ -1,0 +1,10 @@
+@import "./breakpoints";
+
+main {
+  div.wrapper {
+    padding: 10px;
+    background-color: red;
+    max-width: $xl-sc;
+    margin: 0px auto;
+  }
+}
