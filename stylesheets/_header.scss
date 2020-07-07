@@ -1,0 +1,137 @@
+header {
+  overflow: hidden;
+  background: #121315;
+  color: white;
+  position: relative;
+  height: 100vh;
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(10, 10, 10, 0.3);
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      .nav-title {
+        display: flex;
+        cursor: pointer;
+        span {
+          font-weight: 300;
+          &::before {
+            content: "</";
+          }
+          &::after {
+            content: ">";
+          }
+        }
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        .nav-link {
+          display: block;
+          padding: 1rem 1.5rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .animated-div {
+    height: 10px;
+    width: 10px;
+    background: #f3fff3;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    transition: ease-in-out, 1.5s;
+    animation: animatedDots 1s infinite alternate;
+  }
+
+  .header-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .header-content {
+      display: block;
+      .title {
+        font-size: 4rem;
+        padding: 1rem 0;
+        span {
+          font-weight: 300;
+          &::before {
+            content: "</";
+          }
+          &::after {
+            content: ">";
+          }
+        }
+      }
+      .description {
+        padding: 0px 0px 0px 10px;
+        font-size: 2rem;
+      }
+      .button-grp {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 10px;
+        .btn {
+          padding: 10px 3rem;
+          margin-right: 10px;
+          border-radius: 10rem;
+          font-size: 1rem;
+          border: 2px solid #fff;
+          background: #f3fff3;
+          &.btn-login {
+            color: black;
+            &:hover {
+              border-color: white;
+              background: #121315;
+              color: white;
+            }
+          }
+          &.btn-signup {
+            color: white;
+            background: #121212;
+            &:hover {
+              background: white;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .scroll-info {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation-name: scroll-info-animation;
+    animation-direction: alternate-reverse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    p {
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 1.5rem;
+    }
+    i {
+      padding: 10px;
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}

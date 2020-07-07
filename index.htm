@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./stylesheets/css/main.css" />
   </head>
   <body>
-    <header>
+    <header id="header">
       <nav>
         <div class="nav-bar">
           <div class="nav-title">
@@ -25,51 +25,7 @@
           </ul>
         </div>
       </nav>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
-      <div class="animated-div"></div>
+
       <div class="header-wrapper">
         <div class="header-content">
           <h1 class="title">We<span>Code</span></h1>
@@ -80,11 +36,35 @@
           </div>
         </div>
       </div>
+      <div class="scroll-info">
+        <p>
+          Scroll Below
+        </p>
+        <i class="gg-chevron-double-down"></i>
+      </div>
     </header>
+
+    <!-- After Header section -->
+    <main>
+      <div class="wrapper">
+        <h1>This is the main</h1>
+      </div>
+    </main>
+
+    <!-- The javascript section below-->
     <script>
+      // This is the code for bg animation
+      const headerEl = document.getElementById("header");
       const getRandomValue = (min, max) => {
         return Math.floor(Math.random() * (max - min)) + min;
       };
+
+      const totalDots = 50;
+      for (let i = 0; i < totalDots; i++) {
+        const animatedDiv = document.createElement("div");
+        animatedDiv.className = "animated-div";
+        headerEl.appendChild(animatedDiv);
+      }
 
       const animatedDivs = document.getElementsByClassName("animated-div");
       for (i = 0; i < animatedDivs.length; i++) {
@@ -94,6 +74,7 @@
       setInterval(() => {
         let heightY = window.innerHeight;
         let widthX = window.innerWidth;
+
         for (i = 0; i < animatedDivs.length; i++) {
           animatedDivs[i].style.transform =
             "translate(" +
@@ -103,6 +84,7 @@
             "px)";
         }
       }, 1500);
+      // Bg animation ends here...
     </script>
   </body>
 </html>
